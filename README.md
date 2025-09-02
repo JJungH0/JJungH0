@@ -1,36 +1,48 @@
-## 👤 About Me on Book1lluwa — by 최정환
+## 👨‍💻 About Me — 최정환
 
-**포지션**: 쿠폰/이벤트 도메인 개발 · 운영 자동화  
-**핵심 기술스택**: Spring Boot, JPA, Spring Scheduler, RabbitMQ, Redis, MySQL, GitHub Actions, SonarQube
+안녕하세요!  
+저는 **Spring Boot 기반의 MSA 아키텍처 서비스 개발**을 경험한 백엔드 개발자 **최정환**입니다.  
+대규모 트래픽 환경에서 안정적이고 확장 가능한 시스템을 설계·운영하는 데 관심이 많습니다.  
+꾸준한 학습과 지식 공유, 협업을 통해 함께 성장하는 것을 중요하게 생각합니다.
 
-### 💥 내 역할 요약
-- **쿠폰 도메인 전담**: 쿠폰 **CRUD**, 발급/사용 정책, 이력/에러 로깅
-- **운영 자동화**: 
-  - **생일 자동발급** — Spring Scheduler로 매일 00시 대상 회원 일괄 발급
-  - **가입 이벤트 실시간 발급** — 회원가입 이벤트 → **RabbitMQ** 소비자로 비동기 발급
-- **확장성 설계**: 대량 트래픽 시에도 발급 병목을 피하도록 **큐 기반 처리** 및 **재시도 정책** 적용
-- **신뢰성 확보**: 발급/사용 히스토리 모델링, 장애 상황 **상세 로깅**으로 근본 원인 분석 단축
+---
 
-### 🧩 설계 포인트 (왜 이렇게 설계했나?)
-- **동기 발급 → 비동기 전환(RabbitMQ)**  
-  결제/가입 등 핵심 트랜잭션이 **쿠폰 발급 지연**에 끌려가지 않도록 분리.  
-  실패 시 **DLQ(사망 큐)** 로 격리 → 재처리/모니터링 가능.
-- **스케줄러 기반 자동 집행**  
-  마케팅성 쿠폰(생일/기념일)은 **스케줄러 + 배치성 처리**가 운영비를 낮춤.
-- **이벤트 소싱에 준한 이력화**  
-  발급/사용/취소/만료 등 상태 전이를 모두 기록 → 문제 재현과 고객 CS 응대가 쉬워짐.
+## 🛠 Tech Stack
+- **Languages**: Java, Kotlin(학습 중)
+- **Frameworks**: Spring Boot, Spring Cloud (Gateway, Config, Eureka), Spring Batch, JPA/Hibernate
+- **Infra / Ops**: GitHub Actions, Docker, Nginx, SonarQube, 무중단 배포(롤링)
+- **Messaging / Cache**: Redis, RabbitMQ (Kafka 학습 병행 중)
+- **Database**: MySQL
+- **Collaboration**: GitHub Issue/PR 기반 협업, 코드 리뷰, 테스트 자동화
 
-### 🔎 대표 구현(코드 스니펫 가이드)
-> 아래는 제가 구현한 핵심 흐름을 **의사 코드**로 간단히 보여줍니다.  
-> (실제 프로젝트 코드에선 패키지/예외/검증/트랜잭션 경계가 더 정교합니다.)
+---
 
-```java
-// 쿠폰 발급 메시지 소비자 (RabbitMQ Consumer)
-// 역할: 회원가입 이벤트 수신 → 쿠폰 발급 서비스 호출
-@RabbitListener(queues = "coupon.issue.memberSignUp")
-public void handleMemberSignUpEvent(MemberSignUpEvent event) {
-    // 1) 이벤트 유효성 검증
-    // 2) 중복 발급 방지 로직 (이벤트ID / 회원ID 기준 멱등성 보장)
-    // 3) 쿠폰 발급 서비스 호출
-    couponService.issueWelcomeCoupon(event.getMemberId());
-}
+## 📚 프로젝트 경험
+
+### Book1lluwa — 온라인 도서 쇼핑몰 (MSA 기반)
+> 기간: 2025.06 ~ 2025.07  
+> 역할: **쿠폰/이벤트 도메인 담당**
+
+#### 🔑 기여
+- 쿠폰 CRUD 및 정책(발급/사용/만료/취소) 설계·구현
+- **Spring Scheduler** 기반 **생일 쿠폰 자동 발급**
+- **RabbitMQ** 기반 **회원가입 이벤트 실시간 발급**, 멱등성 처리로 중복 방지
+- 발급/사용/만료 이력 및 **에러 로깅 시스템** 구축 → 장애 원인 추적 단축
+- DLQ(Dead Letter Queue) 설계로 **대규모 트래픽 안정성 확보**
+
+#### 💡 문제 해결 사례
+- **문제**: 동기 방식 쿠폰 발급 시 회원가입/결제 API 응답 지연 및 실패 발생
+- **해결**: RabbitMQ 기반 비동기 발급 구조 전환, 멱등키 적용, DLQ로 장애 격리
+- **결과**: 피크 타임에도 API 응답 속도 안정화, 발급 실패율 감소, 고객 경험 개선
+
+🔗 [프로젝트 Demo](https://book1lluwa.store) · [API 명세](https://book1lluwa.store/docs.html) · [소개 영상](https://youtu.be/Mm8H87yzw7I)
+
+---
+
+## 🚀 성장 목표
+- Kotlin · Spring WebFlux · Kafka 기반의 **실시간 대규모 트래픽 처리 시스템** 경험 확장
+- Kubernetes, ArgoCD 등 **운영 자동화·클라우드 네이티브 환경** 심화 학습
+- **지속적인 성능 최적화 & 운영 효율화**를 통해 고가용성 시스템 설계 역량 강화
+- 팀 내 지식 공유와 협업을 즐기는 **함께 성장하는 개발자**로 성장
+
+---
