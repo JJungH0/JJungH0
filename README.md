@@ -1,4 +1,12 @@
-## About Me — 최정환
+<div align="center">
+
+![banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=최정환's%20GitHub%20Portfolio&fontSize=40&fontAlign=50&fontAlignY=35)
+
+</div>
+
+---
+
+## 👨‍💻 About Me — 최정환
 
 안녕하세요!  
 저는 **Spring Boot 기반의 MSA 아키텍처 서비스 개발**을 경험한 백엔드 개발자 취업 준비생 **최정환**입니다.  
@@ -17,6 +25,15 @@
 
 ---
 
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=JJungH0&show_icons=true&theme=radical" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JJungH0&layout=compact&theme=radical" height="150" />
+</p>
+
+---
+
 ## 📚 프로젝트 경험
 
 ### Book1lluwa — 온라인 도서 쇼핑몰 (MSA 기반)
@@ -31,9 +48,9 @@
 - DLQ(Dead Letter Queue) 설계로 **대규모 트래픽 안정성 확보**
 
 #### 💡 문제 해결 사례
-- **문제**: 동기 방식 쿠폰 발급 시 회원가입/결제 API 응답 지연 및 실패 발생
-- **해결**: RabbitMQ 기반 비동기 발급 구조 전환, 멱등키 적용, DLQ로 장애 격리
-- **결과**: 피크 타임에도 API 응답 속도 안정화, 발급 실패율 감소, 고객 경험 개선
+- **문제**: 동기 방식 쿠폰 발급 시 회원가입/결제 API 응답 지연 및 실패 발생  
+- **해결**: RabbitMQ 기반 비동기 발급 구조 전환, 멱등키 적용, DLQ로 장애 격리  
+- **결과**: 피크 타임에도 API 응답 속도 안정화, 발급 실패율 감소, 고객 경험 개선  
 
 🔗 [프로젝트 Demo](https://book1lluwa.store) · [API 명세](https://book1lluwa.store/docs.html) · [소개 영상](https://youtu.be/Mm8H87yzw7I)
 
@@ -46,3 +63,9 @@
 - 팀 내 지식 공유와 협업을 즐기는 **함께 성장하는 개발자**로 성장
 
 ---
+
+<div align="center">
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=footer)
+
+</div>
