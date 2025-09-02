@@ -1,17 +1,17 @@
-## 👨‍💻 About Me — 최정환
+## About Me — 최정환
 
 안녕하세요!  
-저는 **Spring Boot 기반의 MSA 아키텍처 서비스 개발**을 경험한 백엔드 개발자 **최정환**입니다.  
+저는 **Spring Boot 기반의 MSA 아키텍처 서비스 개발**을 경험한 백엔드 개발자 취업 준비생 **최정환**입니다.  
 대규모 트래픽 환경에서 안정적이고 확장 가능한 시스템을 설계·운영하는 데 관심이 많습니다.  
 꾸준한 학습과 지식 공유, 협업을 통해 함께 성장하는 것을 중요하게 생각합니다.
 
 ---
 
 ## 🛠 Tech Stack
-- **Languages**: Java, Kotlin(학습 중)
+- **Languages**: Java
 - **Frameworks**: Spring Boot, Spring Cloud (Gateway, Config, Eureka), Spring Batch, JPA/Hibernate
-- **Infra / Ops**: GitHub Actions, Docker, Nginx, SonarQube, 무중단 배포(롤링)
-- **Messaging / Cache**: Redis, RabbitMQ (Kafka 학습 병행 중)
+- **Infra / Ops**: GitHub Actions, Nginx, SonarQube, 무중단 배포(롤링)
+- **Messaging / Cache**: RabbitMQ
 - **Database**: MySQL
 - **Collaboration**: GitHub Issue/PR 기반 협업, 코드 리뷰, 테스트 자동화
 
