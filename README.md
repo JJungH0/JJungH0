@@ -56,7 +56,7 @@
 - **해결**: RabbitMQ 기반 **비동기 발급 구조** 전환, 멱등성 처리로 **중복 방지**, DLQ로 장애 이벤트 **안전 격리**  
 - **결과**: 피크 타임에도 API 응답 속도 안정화, 발급 실패율 감소, 운영자가 장애를 신속히 추적·복구 가능  
 
-🔗 [프로젝트 Demo](https://book1lluwa.store) · [API 명세](https://book1lluwa.store/docs.html) · [소개 영상](https://youtu.be/Mm8H87yzw7I)
+🔗 [프로젝트 웹 홈페이지](https://book1lluwa.store) · [프로젝트 GitHub](https://github.com/nhnacademy-be10-1lluwa) · [API 명세](https://book1lluwa.store/docs.html) · [소개 영상](https://youtu.be/Mm8H87yzw7I)
 
 ---
 
