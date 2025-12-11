@@ -24,12 +24,12 @@
 - **Collaboration**: GitHub Issue/PR 기반 협업, 코드 리뷰, 테스트 자동화
 
 ---
-
-## 📊 GitHub Stats
+## 📈 Contribution Graph
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JJungH0&show_icons=true&theme=radical" height="150" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JJungH0&layout=compact&theme=radical" height="150" />
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=JJungH0&theme=react-dark&area=true&hide_border=true"
+  />
 </p>
 
 ---
