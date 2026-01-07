@@ -44,13 +44,12 @@
 - 쿠폰 CRUD 및 정책(발급/사용/만료/취소) 설계·구현
 - **Spring Scheduler** 기반 **생일 쿠폰 자동 발급**
 - **RabbitMQ 기반 회원가입 이벤트 실시간 발급**
-  - 멱등성 처리(Idempotency): 동일 이벤트가 여러 번 들어와도 **쿠폰은 1개만 발급**되도록 고유 키를 활용해 **중복 방지**
 - **발급/사용/만료 이력 관리 + 에러 로깅 시스템 구축**
   - 모든 상태 전이를 기록해 **문제 재현·장애 원인 추적**이 용이
 
 #### 💡 문제 해결 사례
 - **문제**: 동기 방식 쿠폰 발급 시 회원가입/결제 API 응답 지연 및 실패 발생  
-- **해결**: RabbitMQ 기반 **비동기 발급 구조** 전환, 멱등성 처리로 **중복 방지**  
+- **해결**: RabbitMQ 기반 **비동기 발급 구조** 전환
 - **결과**: 피크 타임에도 API 응답 속도 안정화, 발급 실패율 감소, 운영자가 장애를 신속히 추적·복구 가능  
 
 🔗 [프로젝트 웹 홈페이지](https://book1lluwa.store) · [프로젝트 GitHub](https://github.com/nhnacademy-be10-1lluwa) · [API 명세](https://book1lluwa.store/docs.html) · [소개 영상](https://youtu.be/Mm8H87yzw7I) · [개인 Notion](https://bottlenose-balloon-0b4.notion.site/1b95c23e942f8197948befcbec5a50f4?v=1b95c23e942f8121b0e2000c57156735&source=copy_link)
